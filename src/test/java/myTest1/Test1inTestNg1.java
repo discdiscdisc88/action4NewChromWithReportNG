@@ -38,7 +38,7 @@ public class Test1inTestNg1 {
 
 		driver.navigate().to("http://google.com");
 		System.out.println("Test2 "+driver.getTitle());
-		AssertJUnit.assertEquals(driver.getTitle(), "Google");
+		AssertJUnit.assertEquals(driver.getTitle(), "GoogleY");
 
 	}
 
