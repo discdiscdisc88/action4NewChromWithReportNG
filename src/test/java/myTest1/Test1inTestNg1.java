@@ -34,14 +34,23 @@ public class Test1inTestNg1 {
 	}
 	
 	@Test
-	public void test1() throws Exception {
+	public void test1Junit() throws Exception {
 
 		driver.navigate().to("http://google.com");
-		System.out.println("Test2 "+driver.getTitle());
-		AssertJUnit.assertEquals(driver.getTitle(), "GooglePP");
+		System.out.println("Test1 "+driver.getTitle());
+		AssertJUnit.assertEquals(driver.getTitle(), "Google_jUnit");
 
 	}
 
+	@Test
+	public void test2tNG() throws Exception {
+
+		driver.navigate().to("http://google.com");
+		System.out.println("Test2 "+driver.getTitle());
+		Assert.assertEquals("GoogleN_testNG", driver.getTitle());
+	}
+
+	
 	@AfterMethod
 	public void tearDown() throws Exception {
 		driver.manage().deleteAllCookies();
